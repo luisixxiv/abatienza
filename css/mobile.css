@@ -1,0 +1,240 @@
+/* ---------- mobile ----------
+   Loaded last on every page. One breakpoint: under 800px wide,
+   every row of columns becomes one column and the side space and headings shrink. */
+@media (max-width: 800px) {
+  :root {
+    --gutter: 16px;
+    --section-y: 36px;
+    --fs-h1: 30px;
+    --fs-h2: 24px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  iframe {
+    width: 100%;
+  }
+
+  /* top bar and nav bar: the menu drops to its own line */
+  .navbar {
+    position: static;
+    flex-wrap: wrap;
+  }
+  .menu {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .menu a {
+    margin: 0 8px;
+  }
+
+  /* 1. rows become columns */
+  .topbar,
+  .hero,
+  .about,
+  .cta,
+  .footer,
+  .block,
+  .threecols,
+  .people,
+  .jobs,
+  .step,
+  .stats,
+  .stackbox,
+  .stackcard,
+  .shero,
+  .faqbox,
+  .qhero,
+  .quotewrap,
+  .qcards,
+  .nextsteps,
+  .fieldrow,
+  .chero,
+  .channels,
+  .formsection,
+  .reality,
+  .fbband {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  /* 2. parts that were a percent of the row now fill it */
+  .herotext,
+  .herosub,
+  .collage,
+  .aboutpics,
+  .abouttext,
+  .ctabox,
+  .fcol,
+  .stacktext,
+  .stackcard img,
+  .intro h1,
+  .introsub,
+  .side,
+  .main,
+  .mini,
+  .steptext,
+  .step img,
+  .peopletext,
+  .stackbox,
+  .stack,
+  .job,
+  .sherotext,
+  .herophotos,
+  .herophotos img,
+  .flip,
+  .faqside,
+  .faqlist,
+  .phero h1,
+  .phero .sub,
+  .pcard,
+  .realitytext,
+  .realitypics,
+  .qherotext,
+  .qsub,
+  .formcol,
+  .summary,
+  .nextsteps div,
+  .qcard,
+  .fieldrow .field,
+  .cherotext,
+  .cherosub,
+  .chphotos,
+  .channel,
+  .formside,
+  .mapside {
+    width: 100%;
+  }
+  .abouttext,
+  .channel,
+  .flip {
+    margin: 0;
+  }
+  .side,
+  .summary {
+    position: static;
+  }
+  .floattwo {
+    margin-left: 0;
+  }
+  .stacktext {
+    padding: 20px;
+  }
+  .qhero h1,
+  .ctatext h2 {
+    font-size: 28px;
+  }
+
+  .stats,
+  .filters {
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 3. rows of small photos and tiles become two per row */
+  .scatter,
+  .strip,
+  .pharow,
+  .filters,
+  .trades {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .filters {
+    justify-content: center;
+  }
+  .scatter img,
+  .strip img,
+  .pimg,
+  .pimg:nth-child(odd),
+  .trade {
+    width: 48%;
+    margin: 0 0 14px 0;
+  }
+
+  /* 4. home: the hover panels become a plain list of photos */
+  .panels {
+    flex-direction: column;
+    height: auto;
+  }
+  .panel,
+  .panel:hover {
+    flex: none;
+    height: 150px;
+    margin: 0 0 6px 0;
+  }
+  .panel span {
+    opacity: 1;
+  }
+
+  /* about: the service list wraps, the photo stack gets smaller, no hover photo */
+  .row {
+    flex-wrap: wrap;
+  }
+  .row b {
+    width: calc(100% - 48px);
+  }
+  .row p {
+    width: 100%;
+    padding-left: 48px;
+  }
+  .stackbox .stackcard {
+    width: 240px;
+    height: 300px;
+  }
+  .preview {
+    display: none !important;
+  }
+
+  /* quote: the 3 progress steps fit a small screen */
+  .pstep b {
+    font-size: 12px;
+  }
+  .pstep span {
+    margin-right: 4px;
+  }
+  .pline {
+    margin: 0 6px;
+  }
+
+  /* projects: the pop-up viewer */
+  .vbox {
+    flex: 1;
+    flex-direction: column;
+    width: auto;
+    min-width: 0;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .vbox img {
+    width: 100%;
+    height: 200px;
+  }
+  .vtext {
+    width: 100%;
+    padding: 20px;
+  }
+  .varrow {
+    width: 32px;
+    margin: 0 4px;
+  }
+  .vclose {
+    top: 10px;
+    right: 10px;
+  }
+
+  /* login: the photo goes away */
+  .loginphoto {
+    display: none;
+  }
+  .loginside {
+    width: 100%;
+  }
+  .loginbox {
+    width: 100%;
+    max-width: 360px;
+  }
+}
